@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-class Grenade : Weapoon, IWeapon, IThrow
+class Grenade : Weapoon, IThrow
 {
    
 

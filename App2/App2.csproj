@@ -47,7 +47,7 @@
     <Compile Include="Grenade.cs" />
     <Compile Include="IThrow.cs" />
     <Compile Include="IVolley.cs" />
-    <Compile Include="IWeapon.cs" />
+    <Compile Include="SingleShoot.cs" />
     <Compile Include="Machinegun.cs" />
     <Compile Include="Pistol.cs" />
     <Compile Include="Program.cs" />
