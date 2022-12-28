@@ -1,0 +1,15 @@
+C:\Users\202010\source\repos\ZaripovRiyaz320Exam\ZaripovRiyaz320Exam\bin\Debug\net6.0\ZaripovRiyaz320Exam.exe
+C:\Users\202010\source\repos\ZaripovRiyaz320Exam\ZaripovRiyaz320Exam\bin\Debug\net6.0\ZaripovRiyaz320Exam.deps.json
+C:\Users\202010\source\repos\ZaripovRiyaz320Exam\ZaripovRiyaz320Exam\bin\Debug\net6.0\ZaripovRiyaz320Exam.runtimeconfig.json
+C:\Users\202010\source\repos\ZaripovRiyaz320Exam\ZaripovRiyaz320Exam\bin\Debug\net6.0\ZaripovRiyaz320Exam.dll
+C:\Users\202010\source\repos\ZaripovRiyaz320Exam\ZaripovRiyaz320Exam\bin\Debug\net6.0\ZaripovRiyaz320Exam.pdb
+C:\Users\202010\source\repos\ZaripovRiyaz320Exam\ZaripovRiyaz320Exam\obj\Debug\net6.0\ZaripovRiyaz320Exam.csproj.AssemblyReference.cache
+C:\Users\202010\source\repos\ZaripovRiyaz320Exam\ZaripovRiyaz320Exam\obj\Debug\net6.0\ZaripovRiyaz320Exam.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\202010\source\repos\ZaripovRiyaz320Exam\ZaripovRiyaz320Exam\obj\Debug\net6.0\ZaripovRiyaz320Exam.AssemblyInfoInputs.cache
+C:\Users\202010\source\repos\ZaripovRiyaz320Exam\ZaripovRiyaz320Exam\obj\Debug\net6.0\ZaripovRiyaz320Exam.AssemblyInfo.cs
+C:\Users\202010\source\repos\ZaripovRiyaz320Exam\ZaripovRiyaz320Exam\obj\Debug\net6.0\ZaripovRiyaz320Exam.csproj.CoreCompileInputs.cache
+C:\Users\202010\source\repos\ZaripovRiyaz320Exam\ZaripovRiyaz320Exam\obj\Debug\net6.0\ZaripovRiyaz320Exam.dll
+C:\Users\202010\source\repos\ZaripovRiyaz320Exam\ZaripovRiyaz320Exam\obj\Debug\net6.0\refint\ZaripovRiyaz320Exam.dll
+C:\Users\202010\source\repos\ZaripovRiyaz320Exam\ZaripovRiyaz320Exam\obj\Debug\net6.0\ZaripovRiyaz320Exam.pdb
+C:\Users\202010\source\repos\ZaripovRiyaz320Exam\ZaripovRiyaz320Exam\obj\Debug\net6.0\ZaripovRiyaz320Exam.genruntimeconfig.cache
+C:\Users\202010\source\repos\ZaripovRiyaz320Exam\ZaripovRiyaz320Exam\obj\Debug\net6.0\ref\ZaripovRiyaz320Exam.dll
