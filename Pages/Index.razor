@@ -1,0 +1,33 @@
+﻿@page "/"
+@inject AuthStateProvider authStateProvider
+@inject NavigationManager navManager
+@inject UserService userService
+@inject IJSRuntime jsRuntime
+
+<PageTitle>Хаб</PageTitle>
+
+<div class="d-flex flex-column justify-content-between" style="max-width: 45em; margin: 0 auto;">
+
+<AuthorizeView>
+		<NotAuthorized>
+		<h1 style="text-align:center;">Хаб</h1>
+			<p style="text-align:center;">Чтобы увидеть здесь что-то, нужно войти.</p>
+	</NotAuthorized>
+	<Authorized>
+		<h1 style="text-align:center;">Хаб</h1>
+	</Authorized>
+</AuthorizeView>
+</div>
+
+@code
+{
+	string role = "Guest";
+	LocalStorageService localStorage;
+
+	protected override async void OnInitialized()
+	{
+		if (AuthStateProvider.IsAuthenticated)
+		{
+		}
+	}
+}

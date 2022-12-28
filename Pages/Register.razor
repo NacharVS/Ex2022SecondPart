@@ -1,0 +1,89 @@
+﻿@page "/register"
+@inject AuthStateProvider authStateProvider
+@inject UserService userService
+@inject NavigationManager navManager
+@inject IJSRuntime JS
+
+<PageTitle>Регистрация</PageTitle>
+
+<div class="d-flex flex-column justify-content-between" style="max-width: 45em; margin: 0 auto; padding-bottom: 5em;">
+	<h3 class="align-self-center">Регистрация</h3>
+	<form @onsubmit="Registration">
+		@if (Error != "")
+		{
+			<div class="form-control alert alert-danger">@Error</div>
+		}
+		<label>
+			Почта:
+		</label>
+		<input required class="form-control" @bind="email" />
+		<br />
+		<label>
+			Имя:
+		</label>
+		<input required class="form-control" @bind="firstname" />
+		<br />
+		<label>
+			Фамилия:
+		</label>
+		<input required class="form-control" @bind="lastname" />
+		<br />
+		<label>
+			Пароль:
+		</label>
+		<input required class="form-control" type="password" @bind="password" />
+		<br />
+		<label>
+			Повторите пароль:
+		</label>
+		<input required class="form-control" type="password" @bind="repassword" />
+		<br />
+		<label>
+			Ссылка на фото:
+		</label>
+		<input required class="form-control" @bind="photoId" />
+		<br />
+        
+		<button class="btn btn-primary" type="submit">Зарегистрироваться</button>
+	</form>
+</div>
+@code
+{
+	private string firstname = "";
+	private string email = "";
+	private string password = "";
+	private string repassword = "";
+	private string lastname = "";
+	private string photoId = "";
+	private bool hidden = true;
+	LocalStorageService localStorage;
+	string Error = "";
+
+	[CascadingParameter]
+	private Task<AuthenticationState> AuthenticationStateTask { get; set; }
+
+	private async void AddError(string error)
+	{
+		Error = error;
+		StateHasChanged();
+		await JS.InvokeVoidAsync("scrollToTopfunc");
+	}
+
+	private void Registration()
+	{
+		var res = userService.Registration(firstname, lastname, email, password, repassword, photoId);
+		if (res == "")
+		{
+			localStorage = new LocalStorageService(JS);
+			AuthStateProvider.IsAuthenticated = true;
+			AuthStateProvider.UserName = userService.GetEmail();
+			navManager.NavigateTo("");
+			authStateProvider.NotifyAuthenticationStateChanged();
+		}
+		else
+		{
+			AddError(res);
+		}
+
+	}
+}
