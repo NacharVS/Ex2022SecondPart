@@ -2,7 +2,7 @@ using Core.BaseEntities;
 
 namespace Core.Entities;
 
-public class Tank : Military
+public class Tank : Ranged
 {
     private const double ABILITY_HEALTH_UPGRADE = 20;
     
