@@ -1,0 +1,85 @@
+﻿@page "/"
+@using ExamGilaev320.Code;
+
+<PageTitle>Registration</PageTitle>
+
+<h1>Registration</h1>
+
+<p>Name</p>
+<input type="text" @onchange="@((ChangeEventArgs e) => name = e.Value.ToString())">
+
+
+<p>Surname</p>
+<input type="text" @onchange="@((ChangeEventArgs e) => surname = e.Value.ToString())">
+
+
+<p>Email</p>
+<input type="text" @onchange="@((ChangeEventArgs e) => email = e.Value.ToString())">
+
+<p>Photo</p>
+<input type="file">
+
+<br>
+
+<p>Password</p>
+<input type="text" @onchange="@((ChangeEventArgs d) => password = d.Value.ToString())">
+
+<p>Password</p>
+<input type="text" @onchange="@((ChangeEventArgs d) => reppassword = d.Value.ToString())">
+<br>
+<button class="btn btn-primary" @onclick="Reggistration">Registration</button>
+<br>
+<p>@message</p>
+
+
+
+
+@code {
+    private string typeInput = "Login";
+    private int currentAuthoriz = 0;
+    private string name = "";
+    private string surname = "";
+    private string email = "";
+    private string password = "";
+    private string reppassword = "";
+    private string message = "";
+    Code.User user;
+
+    private void Reggistration()
+    {
+        if(reppassword == password && name != "" && surname != "" && email != "" && password != "")
+        {
+            user = new Code.User(name, surname, email, password);
+            Code.Mongo.AddToDataBase(user);
+            message = "Пользователь зарегестрирован!";
+        }
+        else
+        {
+            message = "Проверьте корреектность и заполненность данных";
+        }
+    }
+
+    private bool CheckEmail()
+    {
+        if (password.Length < 3)
+        {
+            return false;
+        }
+        else
+        {
+            return true;
+        }
+    }
+
+    private bool CheckPassword()
+    {
+        if (password.Length < 3)
+        {
+            return false;
+        }
+        else
+        {
+            return true;
+        }
+    }
+}

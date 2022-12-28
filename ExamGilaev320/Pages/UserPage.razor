@@ -1,0 +1,32 @@
+﻿@page "/userpage"
+
+<h3>Personal Page</h3>
+<p>Вход выполнен</p>
+<p>Ваши данные:</p>
+<p>Name</p>
+<input type="text" @onchange="@((ChangeEventArgs e) => name = e.Value.ToString())">
+
+
+<p>Surname</p>
+<input type="text" @onchange="@((ChangeEventArgs e) => surname = e.Value.ToString())">
+
+
+<p>Email</p>
+<input type="text" @onchange="@((ChangeEventArgs e) => email = e.Value.ToString())">
+
+
+<p>Password</p>
+<input type="text" @onchange="@((ChangeEventArgs d) => password = d.Value.ToString())">
+
+
+@code {
+    private string typeInput = "Login";
+    private int currentAuthoriz = 0;
+    private string name = "";
+    private string surname = "";
+    private string email = "";
+    private string password = "";
+    private string reppassword = "";
+    private string message = "";
+    Code.User user;
+}

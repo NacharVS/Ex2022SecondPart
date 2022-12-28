@@ -1,0 +1,69 @@
+﻿@page "/authorization"
+@inject NavigationManager NavigationManager
+
+<PageTitle>Authorization</PageTitle>
+
+<h1>Authorization</h1>
+
+<p>Email</p>
+<input type="text" @onchange="@((ChangeEventArgs e) => email = e.Value.ToString())">
+
+<p>Password</p>
+<input type="text" @onchange="@((ChangeEventArgs d) => password = d.Value.ToString())">
+<br/>
+<button class="btn btn-primary" @onclick="Login">Login</button>
+<p>@message</p>
+
+
+
+
+
+
+@code {
+    private string typeInput = "Login";
+    private int currentAuthoriz = 0;
+    private string email = "";
+    private string password = "";
+    private string message = "";
+
+
+    private void Login()
+    {
+        Code.User userFind = Code.Mongo.FindByName(email);
+        if (Code.Mongo.FindByName(email).password == password)
+        {
+            message = "Good job! You authorized";
+            NavigationManager.NavigateTo("userpage");
+        }
+        else
+        {
+
+            message = "Error email or password";
+        }
+    }
+
+    private bool CheckEmail()
+    {
+        if (password.Length < 3)
+        {
+            return false;
+        }
+        else
+        {
+            return true;
+        }
+    }
+
+    private bool CheckPassword()
+    {
+        if (password.Length < 3)
+        {
+            return false;
+        }
+        else
+        {
+            return true;
+        }
+    }
+
+}
