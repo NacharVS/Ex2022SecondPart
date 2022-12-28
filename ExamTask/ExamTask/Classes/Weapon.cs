@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ExamTask.Classes
 {
-    public class IWeapon : Interfaces.IWeapon, IMultiGun
+    public class Weapon : Interfaces.IWeapon, IMultiGun
     {
         public int MagazineCharge { get; set; }
 

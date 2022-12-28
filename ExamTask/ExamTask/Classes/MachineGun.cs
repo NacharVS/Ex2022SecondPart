@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ExamTask.Classes
 {
-    public class MachineGun : IWeapon, IMultiGun
+    public class MachineGun : Weapon, IMultiGun
     {
         public void MultiGun()
         {

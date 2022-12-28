@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ExamTask.Classes
 {
-    public class Grenade : IThrowable
+    public class Grenade : Weapon, IThrowable
     {
         public void Throw()
         {
