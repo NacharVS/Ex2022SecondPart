@@ -1,0 +1,27 @@
+﻿@page "/ProfilePage"
+
+@using Exam.Data
+@inject UserLoginedService UserLoginedService
+@inject NavigationManager NavigationManager
+
+<h3>ProfilePage</h3>
+<p>Your first name: @user.FName</p>
+<p>Your second name: @user.LName</p>
+<p>Your mail: @user.Mail</p>
+<p>Your password: @user.Password</p>
+<button @onclick="Exit">Exit</button>
+
+@code {
+    User user;
+
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+        user = UserLoginedService.user;
+    }
+
+    private void Exit()
+    {
+        NavigationManager.NavigateTo("/");
+    }
+}

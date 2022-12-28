@@ -1,0 +1,46 @@
+﻿@page "/AuthorizationPage"
+
+@using Exam.Data
+@inject NavigationManager NavigationManager
+@inject MongoConnection MongoConnection
+@inject UserLoginedService UserLoginedService
+
+<h3>AuthorizationPage</h3>
+
+<input type="text" @bind-value="mail" placeholder="Enter email"/>
+<input type="password" @bind-value="password" placeholder="Enter password"/>
+<button class="btn btn-primary" @onclick="Registration">Registrate</button>
+<button class="btn btn-primary" @onclick="Enter">Enter</button>
+<p>@exMessage</p>
+
+@code {
+    string mail;
+    string password;
+    string exMessage;
+    
+    private void Registration()
+    {
+        NavigationManager.NavigateTo("Registration");
+    }
+
+    private void Enter()
+    {
+        if (String.IsNullOrEmpty(mail) || String.IsNullOrEmpty(password))
+        {
+            exMessage = "Not all fields are written!";
+            return;
+        }
+
+        var foundedUser = MongoConnection.Login(mail, password);
+
+        if(foundedUser == null)
+        {
+            exMessage = "Not correct login or password";
+        }
+        else
+        {
+            UserLoginedService.user = foundedUser;
+            NavigationManager.NavigateTo("/Profile");
+        }
+    }
+}

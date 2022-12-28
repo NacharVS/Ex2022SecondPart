@@ -1,0 +1,43 @@
+﻿@page "/RegistrationPage"
+@using Exam.Data
+
+@inject NavigationManager NavigationManager
+@inject MongoConnection MongoConnection
+
+<h3>RegistrationPage</h3>
+<h1>Registration</h1>
+<input type="text" name="fName" @bind-value="user.FName" placeholder="Enter a user first name"/>
+<input type="text" name="lName" @bind-value="user.LName" placeholder="Enter a user last name"/>
+<input type="text" name="mail" @bind-value="user.Mail" placeholder="Enter a user mail"/>
+<input type="password" name="password" @bind-value="user.Password" placeholder="Enter a user password"/>
+<input type="password" name="repeatedPassword" @bind-value="repeatedPassword" placeholder="Repeat a user password"/>
+<button class="btn btn-primary" @onclick="Registration">Registrate</button>
+<p>@exMessage</p>
+
+@code
+{
+    string repeatedPassword;
+    string exMessage;
+    User user = new User();
+
+    private void Registration()
+    {
+        if (user.Password != repeatedPassword)
+        {
+            exMessage = "Passwords don't match";
+            return;
+        }
+        if (user.FName == "" || user.LName == "" || user.Mail == "" || user.Password == "")
+        {
+            exMessage = "Not all fields are filled in";
+            return;
+        }
+        if (MongoConnection.FindByMail(user.Mail) != null)
+        {
+            exMessage = "This login is taken";
+            return;
+        }
+        MongoConnection.AddUser(user);
+        NavigationManager.NavigateTo("Authorization");
+    }  
+}
