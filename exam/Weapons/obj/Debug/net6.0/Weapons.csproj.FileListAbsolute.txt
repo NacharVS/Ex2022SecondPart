@@ -1,0 +1,5 @@
+C:\Users\Elvina\Desktop\exam\Weapons\obj\Debug\net6.0\Weapons.csproj.AssemblyReference.cache
+C:\Users\Elvina\Desktop\exam\Weapons\obj\Debug\net6.0\Weapons.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Elvina\Desktop\exam\Weapons\obj\Debug\net6.0\Weapons.AssemblyInfoInputs.cache
+C:\Users\Elvina\Desktop\exam\Weapons\obj\Debug\net6.0\Weapons.AssemblyInfo.cs
+C:\Users\Elvina\Desktop\exam\Weapons\obj\Debug\net6.0\Weapons.csproj.CoreCompileInputs.cache
