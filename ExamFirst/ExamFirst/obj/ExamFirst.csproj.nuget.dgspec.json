@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\user\\source\\repos\\ExamFirst\\ExamFirst\\ExamFirst.csproj": {}
+    "C:\\Users\\Пользователь\\source\\repos\\Ex2022SecondPart\\ExamFirst\\ExamFirst\\ExamFirst.csproj": {}
   },
   "projects": {
-    "C:\\Users\\user\\source\\repos\\ExamFirst\\ExamFirst\\ExamFirst.csproj": {
+    "C:\\Users\\Пользователь\\source\\repos\\Ex2022SecondPart\\ExamFirst\\ExamFirst\\ExamFirst.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\source\\repos\\ExamFirst\\ExamFirst\\ExamFirst.csproj",
+        "projectUniqueName": "C:\\Users\\Пользователь\\source\\repos\\Ex2022SecondPart\\ExamFirst\\ExamFirst\\ExamFirst.csproj",
         "projectName": "ExamFirst",
-        "projectPath": "C:\\Users\\user\\source\\repos\\ExamFirst\\ExamFirst\\ExamFirst.csproj",
-        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\source\\repos\\ExamFirst\\ExamFirst\\obj\\",
+        "projectPath": "C:\\Users\\Пользователь\\source\\repos\\Ex2022SecondPart\\ExamFirst\\ExamFirst\\ExamFirst.csproj",
+        "packagesPath": "C:\\Users\\Пользователь\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Пользователь\\source\\repos\\Ex2022SecondPart\\ExamFirst\\ExamFirst\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Пользователь\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -54,7 +54,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }
