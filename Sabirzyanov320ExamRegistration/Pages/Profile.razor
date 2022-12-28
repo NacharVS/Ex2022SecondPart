@@ -1,0 +1,11 @@
+@page "/Profile"
+@using Sabirzyanov320ExamRegistration.Services
+<h3>Profile</h3>
+
+<p>Имя: @AuthorizationService.AuthorizedUser.FirstName</p>
+<p>Фамилия: @AuthorizationService.AuthorizedUser.LastName</p>
+<p>Почта: @AuthorizationService.AuthorizedUser.Email</p>
+
+@code {
+    
+}

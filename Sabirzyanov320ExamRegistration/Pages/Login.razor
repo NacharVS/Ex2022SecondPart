@@ -1,0 +1,24 @@
+@page "/Login"
+@using Sabirzyanov320ExamRegistration.Data
+@using Sabirzyanov320ExamRegistration.Services
+@inject NavigationManager NavigationManager
+<h3>Login</h3>
+
+    <input type="email" placeholder="E-mail" @bind="_email">
+    <input type="password" placeholder="Password" @bind="_password">
+<button onclick="@Auth">Login</button>
+@code {
+    string _email = "";
+    string _password = "";
+    private void Auth()
+    {
+        var user = UserRepository.GetUserByEmail(_email);
+        if (user.Password != _password)
+        {
+            return;
+        }
+
+        AuthorizationService.AuthorizedUser = user;
+        NavigationManager.NavigateTo("/profile");
+    }
+}

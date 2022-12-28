@@ -1,0 +1,44 @@
+@page "/registration"
+@using Sabirzyanov320ExamRegistration.Data.Entities
+@using Sabirzyanov320ExamRegistration.Data
+<h3>Registration</h3>
+
+
+<input type="text" placeholder="Name" @bind='_user.FirstName'>
+<input type="text" placeholder="Surname" @bind='_user.LastName'>
+<input type="email" placeholder="E-mail" @bind='_user.Email'>
+<input type="password" placeholder="Password" @bind="_user.Password">
+<input type="password" placeholder="Repeat password" @bind="_repeatPass">
+<input type="file">
+<p class="error" style="visibility: @isError">Ошибка</p>
+<button onclick="@Registrate">Registration</button>
+
+@code {
+    private string isError = "hidden";
+    private User _user = new User();
+    private string _repeatPass = "";
+
+    private void Registrate()
+    {
+        if (_user.Password != _repeatPass)
+        {
+            isError = "visible";
+            return;
+        }
+
+        if (_user.Email == "" || _user.Password == "" || _user.LastName == "")
+        {
+            isError = "visible";
+            return;
+        }
+
+        if (UserRepository.GetUserByEmail(_user.Email) != null)
+        {
+            isError = "visible";
+            return;
+        }
+
+        UserRepository.InsertUser(_user);
+    }
+    
+}
