@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace ExamTwo
+namespace ExamTwo.PagesApp
 {
     /// <summary>
     /// Логика взаимодействия для AddBasketPage.xaml

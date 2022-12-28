@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using ExamTwo.Classes;
 
 namespace ExamTwo
 {
@@ -21,6 +22,8 @@ namespace ExamTwo
     public partial class MainWindow : Window
     {
         private int balance;
+        private List<Product> listProduct = new List<Product>();  
+        
         public MainWindow()
         {
             balance = 10000;

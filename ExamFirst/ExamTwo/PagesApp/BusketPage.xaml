@@ -6,9 +6,9 @@
       xmlns:local="clr-namespace:ExamTwo.PagesApp"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="BusketPage">
+      Title="BusketPage" Background="White">
 
     <Grid>
-        
+        <TextBlock TextWrapping="Wrap" HorizontalAlignment="Center" Text="Viewing busket"/>
     </Grid>
 </Page>
