@@ -1,0 +1,15 @@
+C:\Users\202014\source\repos\ConsoleAppPetrov\ConsoleAppPetrov\obj\Debug\net6.0\ConsoleAppPetrov.csproj.AssemblyReference.cache
+C:\Users\202014\source\repos\ConsoleAppPetrov\ConsoleAppPetrov\obj\Debug\net6.0\ConsoleAppPetrov.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\202014\source\repos\ConsoleAppPetrov\ConsoleAppPetrov\obj\Debug\net6.0\ConsoleAppPetrov.AssemblyInfoInputs.cache
+C:\Users\202014\source\repos\ConsoleAppPetrov\ConsoleAppPetrov\obj\Debug\net6.0\ConsoleAppPetrov.AssemblyInfo.cs
+C:\Users\202014\source\repos\ConsoleAppPetrov\ConsoleAppPetrov\obj\Debug\net6.0\ConsoleAppPetrov.csproj.CoreCompileInputs.cache
+C:\Users\202014\source\repos\ConsoleAppPetrov\ConsoleAppPetrov\bin\Debug\net6.0\ConsoleAppPetrov.exe
+C:\Users\202014\source\repos\ConsoleAppPetrov\ConsoleAppPetrov\bin\Debug\net6.0\ConsoleAppPetrov.deps.json
+C:\Users\202014\source\repos\ConsoleAppPetrov\ConsoleAppPetrov\bin\Debug\net6.0\ConsoleAppPetrov.runtimeconfig.json
+C:\Users\202014\source\repos\ConsoleAppPetrov\ConsoleAppPetrov\bin\Debug\net6.0\ConsoleAppPetrov.dll
+C:\Users\202014\source\repos\ConsoleAppPetrov\ConsoleAppPetrov\bin\Debug\net6.0\ConsoleAppPetrov.pdb
+C:\Users\202014\source\repos\ConsoleAppPetrov\ConsoleAppPetrov\obj\Debug\net6.0\ConsoleAppPetrov.dll
+C:\Users\202014\source\repos\ConsoleAppPetrov\ConsoleAppPetrov\obj\Debug\net6.0\refint\ConsoleAppPetrov.dll
+C:\Users\202014\source\repos\ConsoleAppPetrov\ConsoleAppPetrov\obj\Debug\net6.0\ConsoleAppPetrov.pdb
+C:\Users\202014\source\repos\ConsoleAppPetrov\ConsoleAppPetrov\obj\Debug\net6.0\ConsoleAppPetrov.genruntimeconfig.cache
+C:\Users\202014\source\repos\ConsoleAppPetrov\ConsoleAppPetrov\obj\Debug\net6.0\ref\ConsoleAppPetrov.dll
