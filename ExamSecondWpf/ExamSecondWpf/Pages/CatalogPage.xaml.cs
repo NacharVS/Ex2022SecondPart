@@ -85,6 +85,8 @@ namespace ExamSecondWpf.Pages
                     var Connection = new MongoConnection();
 
                     Connection.AddPurchaseInfo(new Purchase() { UserName = CurrentUser.Name, Price = price, Date = DateTime.Now, Products = _products });
+
+                    MessageBox.Show("Успешно!", "Успешно", MessageBoxButton.OK, MessageBoxImage.Information);
                 }
                 else
                 {
