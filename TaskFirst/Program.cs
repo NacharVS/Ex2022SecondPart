@@ -17,3 +17,4 @@ var soldier = new Soldier() { Name = "Soldier" };
 
 tank.Attack(soldier);
 tank.Attack(soldier);
+volcano.Attack(new Unit[] { harvester, miner, tank });
