@@ -1,0 +1,57 @@
+﻿@page "/"
+@using Ex2022Blazor.Data.MongoDb
+@inject NavigationManager Manager
+@inject IJSRuntime JsRuntime
+@inject MongoDbConnection Connection
+
+<PageTitle>Authorization</PageTitle>
+
+<h1>Автооризация</h1>
+
+<EditForm Model="typeof(User)">
+    <p>Введите почту</p>
+    <InputText @bind-Value="@_email"></InputText>
+    <p>Введите пароль</p>
+    <InputText @bind-Value="@_password"></InputText>
+    <button @onclick="@Login">Войти</button>
+    <button @onclick="@Registry">Зарегистрироваться</button>
+</EditForm>
+
+@code
+{
+    string _email;
+    string _password;
+
+    public void Login()
+    {
+        if (!String.IsNullOrEmpty(_email) && !String.IsNullOrEmpty(_password))
+        {
+            User? user = Connection.FindByEmail(_email);
+            if (user is not null)
+            {
+                if (user.Password.Equals(_password))
+                {
+                    Connection.User = user;
+                    Manager.NavigateTo("/personalArea");
+                }
+                else
+                {
+                    JsRuntime.InvokeVoidAsync("alert", "Неправильный пароль!");
+                }
+            }
+            else
+            {
+                JsRuntime.InvokeVoidAsync("alert", "Такого пользователя не существует!");
+            }
+        }
+        else
+        {
+            JsRuntime.InvokeVoidAsync("alert", "Заполните все поля!");
+        }
+    }
+
+    public void Registry()
+    {
+        Manager.NavigateTo("/registration");
+    }
+}

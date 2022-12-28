@@ -1,0 +1,64 @@
+﻿@page "/registration"
+@using Ex2022Blazor.Data.MongoDb
+
+@inject MongoDbConnection Connection
+@inject NavigationManager Manager
+@inject IJSRuntime JsRuntime
+
+<PageTitle>Registration</PageTitle> 
+
+<h1>Регистрация</h1>
+
+<EditForm Model="typeof(User)">
+    
+    <p>Введите имя</p>
+    <InputText @bind-Value="@_firstName"></InputText>
+    <p>Введите фамилия</p>
+    <InputText @bind-Value="@_secondName"></InputText>
+    <p>Введите почту</p>
+    <InputText @bind-Value="@_email"></InputText>
+    <p>Выберете аватар (по желанию)</p>
+    <InputFile></InputFile>
+    <p>Введите пароль</p>
+    <InputText @bind-Value="@_firstPassword"></InputText>
+    <p>Повторите пароль</p>
+    <InputText @bind-Value="@_secondPassword"></InputText>
+    <button @onclick="Registry">Зарегистрироваться</button>
+</EditForm>
+
+@code 
+{
+    string _firstName;
+    string _secondName;
+    string _email;
+    string _firstPassword;
+    string _secondPassword;
+
+    public void Registry()
+    {
+        if (!String.IsNullOrEmpty(_firstName) && !String.IsNullOrEmpty(_secondName) &&
+            !String.IsNullOrEmpty(_email) && !String.IsNullOrEmpty(_firstPassword) &&
+            !String.IsNullOrEmpty(_secondPassword))
+        {
+            if (_firstPassword.Equals(_secondPassword))
+            {
+                try
+                {              
+                    Connection.AddToDatabase(new User(_firstName, _secondName, _email, _firstPassword));  
+                    Manager.NavigateTo("/");
+                }
+                catch (Exception e)
+                {
+                }
+            }
+            else
+            {
+                JsRuntime.InvokeVoidAsync("alert", "Пароли не одинаковые!");
+            }
+        }
+        else
+        {
+            JsRuntime.InvokeVoidAsync("alert", "Заполните все поля!");
+        }
+    }
+}

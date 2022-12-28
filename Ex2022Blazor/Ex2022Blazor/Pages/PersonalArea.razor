@@ -1,0 +1,41 @@
+﻿@page "/personalArea"
+@using Ex2022Blazor.Data.MongoDb
+
+@inject NavigationManager Manager
+@inject IJSRuntime JsRuntime
+@inject MongoDbConnection Connection
+
+<PageTitle>Personal area</PageTitle>
+
+<h1>Личный кабинет</h1>
+
+    <p>Введите имя</p>
+    <InputText @bind-Value="@_firstName"></InputText>
+    <p>Введите фамилия</p>
+    <InputText @bind-Value="@_secondName"></InputText>
+    <p>Введите почту</p>
+    <InputText @bind-Value="@_email"></InputText>
+    <p>Выберете аватар (по желанию)</p>
+    <InputFile></InputFile>
+    <p>Введите пароль</p>
+    <InputText @bind-Value="@_firstPassword"></InputText>
+
+
+@code {
+    string _firstName;
+    string _secondName;
+    string _email;
+    string _firstPassword;
+
+    protected override void OnInitialized()
+    {
+        if (Connection.User is not null)
+        {
+            _firstName = Connection.User.FirstName;
+            _secondName = Connection.User.LastName;
+            _email = Connection.User.Email;
+            _firstPassword = Connection.User.Password;
+        }
+    }
+
+}
