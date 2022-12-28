@@ -1,0 +1,15 @@
+C:\Users\gabdr\source\repos\Weapon\Weapon\bin\Debug\net6.0\Weapon.exe
+C:\Users\gabdr\source\repos\Weapon\Weapon\bin\Debug\net6.0\Weapon.deps.json
+C:\Users\gabdr\source\repos\Weapon\Weapon\bin\Debug\net6.0\Weapon.runtimeconfig.json
+C:\Users\gabdr\source\repos\Weapon\Weapon\bin\Debug\net6.0\Weapon.dll
+C:\Users\gabdr\source\repos\Weapon\Weapon\bin\Debug\net6.0\Weapon.pdb
+C:\Users\gabdr\source\repos\Weapon\Weapon\obj\Debug\net6.0\Weapon.csproj.AssemblyReference.cache
+C:\Users\gabdr\source\repos\Weapon\Weapon\obj\Debug\net6.0\Weapon.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gabdr\source\repos\Weapon\Weapon\obj\Debug\net6.0\Weapon.AssemblyInfoInputs.cache
+C:\Users\gabdr\source\repos\Weapon\Weapon\obj\Debug\net6.0\Weapon.AssemblyInfo.cs
+C:\Users\gabdr\source\repos\Weapon\Weapon\obj\Debug\net6.0\Weapon.csproj.CoreCompileInputs.cache
+C:\Users\gabdr\source\repos\Weapon\Weapon\obj\Debug\net6.0\Weapon.dll
+C:\Users\gabdr\source\repos\Weapon\Weapon\obj\Debug\net6.0\refint\Weapon.dll
+C:\Users\gabdr\source\repos\Weapon\Weapon\obj\Debug\net6.0\Weapon.pdb
+C:\Users\gabdr\source\repos\Weapon\Weapon\obj\Debug\net6.0\Weapon.genruntimeconfig.cache
+C:\Users\gabdr\source\repos\Weapon\Weapon\obj\Debug\net6.0\ref\Weapon.dll
