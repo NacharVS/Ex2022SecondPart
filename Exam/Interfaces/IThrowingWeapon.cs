@@ -1,8 +1,6 @@
 ﻿using System;
 
-public interface IThrowingWeapon
+public interface IThrowingWeapon : IWeapon
 {
-	public int Damage { get; set; }
-	public void Throw() { }
-	
+	public int ThrowDamage { get; set; }
 }
