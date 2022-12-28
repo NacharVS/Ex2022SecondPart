@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskFirst", "TaskFirst.csproj", "{7F125139-39DC-453B-A4A2-1E82532F5014}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7F125139-39DC-453B-A4A2-1E82532F5014}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F125139-39DC-453B-A4A2-1E82532F5014}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F125139-39DC-453B-A4A2-1E82532F5014}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F125139-39DC-453B-A4A2-1E82532F5014}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
