@@ -12,7 +12,7 @@ public abstract class Unit
         get => _health;
         set
         {
-            if (!IsDead && value < 0)
+            if (!IsDead && value <= 0)
             {
                 IsDead = true;
                 Console.WriteLine($"{Name} Погиб");

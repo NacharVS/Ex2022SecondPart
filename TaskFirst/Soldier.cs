@@ -2,12 +2,14 @@
 
 public class Soldier : MilitaryUnit
 {
-    private const int GrenadeProbability = 30; // %
-    private const int GrenadeRadius = 100; // %
+    private const int GrenadeProbability = 50; // %
+    private const int GrenadeRadius = 100; 
     
     public Soldier()
     {
         OnDeath += GrenadeOnDeath;
+        Health = 100;
+        AttackDamage = 100;
     }
 
     private void GrenadeOnDeath()

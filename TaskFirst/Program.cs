@@ -11,8 +11,9 @@ worker.Work();
 miner.Work();
 harvester.Work();
 
-var tank = new Tank();
-var volcano = new VolcanoTank();
-var soldier = new Soldier();
+var tank = new Tank() { Name = "Tank" };
+var volcano = new VolcanoTank() { Name = "Volcano" };
+var soldier = new Soldier() { Name = "Soldier" };
 
+tank.Attack(soldier);
 tank.Attack(soldier);
